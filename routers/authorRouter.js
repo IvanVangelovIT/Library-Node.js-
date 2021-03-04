@@ -6,14 +6,15 @@ module.exports = (router) => {
     // GET request for creating Author. NOTE This must come before route for id (i.e. display author).
     router.get('/author/create', authorController.get.create);
     // GET request to delete Author.
+    router.get('/author/all', authorController.get.all);
+    // GET request to delete Author.
     router.get('/author/:id/delete', authorController.get.delete);
     // GET request to update Author.
     router.get('/author/:id/update', authorController.get.update);
     // GET request for one Author.
-    router.get('/author/:authorId', authorController.get.details);
-    // GET request for list of all Authors. 
+    router.get('/author/details/:authorId', authorController.get.details);
+    router.get('/author/edit/:authorId', authorController.get.edit);
 
-    //TODO changed list to all
     router.get('/authors', authorController.get.all);
 
     // POST request for creating Author.

@@ -12,14 +12,13 @@
 
 header {
     width: 100%;
-    border-bottom: 2px solid var(--main-blue);
-    font-size: 20px;
+    color:#f0f9ff;
+    background-color:#282d32;
 }
 
 header nav {
     display: flex;
     padding: 0.5%;
-    background-color: var(--main-blue);
     border-bottom: 2px solid var(--main-orange);
 }
 
@@ -58,8 +57,7 @@ header nav ul li:nth-child(odd) {
 
 footer {
     width: 100%;
-    background-color: var(--main-blue);
-    color: white;
+    
 }
 
 footer p {
