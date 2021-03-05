@@ -43,14 +43,15 @@ module.exports = {
                 .then((author) => {
                     res.render('./author/details.hbs', {...author})
                 })
+                .catch((err) => console.log(err))
         }, 
 
         delete(req, res, next) {
             Author
-                .findOne({_id: req.params.authorId})
+                .deleteOne({_id: req.params.authorId})
                 .lean()
                 .then((author) => {
-                    res.render('./author/delete.hbs', {...author})
+                    res.render('./author/all.hbs')
                 })
         },
 
@@ -66,8 +67,7 @@ module.exports = {
             
     },
 
-    post: {
-        
+    post: {       
         create(req, res, next) {
             const {first_name, family_name, date_of_birth, date_of_death} = req.body;
             
@@ -75,17 +75,19 @@ module.exports = {
             .create({...req.body})
             .then((author) => {
                 console.log(author);
-                res.redirect('./all')
+                res.redirect('./author/all.hbs')
             })
         },
-
       
-        post(req, res, next) {
+        delete(req, res, next) {
 
-        },
-
-        update(req, res, next) {
-
+            const {authorId} = req.params;
+            Author
+            .deleteOne({_id: authorId})
+            .then((author) => {
+                res.redirect('./author/all.hbs');
+            })
+            .catch((err) => console.log(err))
         },
 
         edit(req, res, next) {

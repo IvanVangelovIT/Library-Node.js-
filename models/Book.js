@@ -16,8 +16,9 @@ module.exports = (mongoose) => {
             type: String,
              required: true
         },
-        isbn: {type: String,
-             required: true
+        isbn: {
+            type: String,
+            required: true
         },
         genre: [
             {

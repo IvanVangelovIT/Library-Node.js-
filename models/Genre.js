@@ -7,7 +7,12 @@ module.exports = (mongoose) => {
             type: String,
             minLength: 3,
             maxlength: 60,
-        }
+        },
+        book: {
+            type: Schema.Types.ObjectId,
+            ref: 'Book',
+            required: true
+        },
     });
 
     return Model('Genre', GenreSchema);

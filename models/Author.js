@@ -18,7 +18,13 @@ module.exports = (mongoose) => {
           },
           date_of_death: {
               type: Date
-          },       
+          },
+          books: [
+            {
+                type: ObjectId,
+                ref: "Book"
+            }
+        ]       
     });
 
     // Virtual for author's full name

@@ -3,7 +3,7 @@ const routers = [
     { bookRouter: require('./bookRouter') },
     { bookInstanceRouter: require('./bookInstanceRouter') },
     { genreRouter: require('./genreRouter') },
-    { homeRouter: require('./homeRouter') },
+    //{ homeRouter: require('./homeRouter') },
     { userRouter: require('./userRouter') },
 ];
 

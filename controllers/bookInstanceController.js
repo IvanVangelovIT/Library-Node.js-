@@ -8,7 +8,7 @@ module.exports = {
         delete(req, res, next) {
         
         },
-        update(req, res, next) {
+        edit(req, res, next) {
 
         },
         detail(req,res, next) {
@@ -16,6 +16,15 @@ module.exports = {
         },
         all(req, res, next) {
 
+            const book = BookInstance
+            .find()
+            .lean()
+            .populate('book')
+            .exec(function (err, bookinstances) {
+              if (err) { return next(err); }
+              // Successful, so render
+              res.render('bookinstance_list', { title: 'Book Instance List', bookinstances });
+            });
         }
     },
 
@@ -29,7 +38,7 @@ module.exports = {
         post(req, res, next) {
 
         },
-        update(req, res, next) {
+        edit(req, res, next) {
 
         }
     }

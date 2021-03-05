@@ -10,7 +10,7 @@ module.exports = (express, app) => {
     app.use(cookieParser());
 
     app.use(auth);
-
+       
     app.engine('hbs', handlebars({
         layoutsDir: 'views',
         defaultLayout: 'base-layout.hbs',

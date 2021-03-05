@@ -3,19 +3,36 @@ const {Book} = require('../models')
 module.exports = {
     get: {
         create(req, res, next) {
-            res.render('')
+            Book
+            .Find({})
+            .lean()
+            .populate('author', 'first_name', 'family_name')
+            .then((books) => {
+                res.render('./bookTESTSTTSTS/all.hbs', {
+                    books
+                })
+            })
         },
         delete(req, res, next) {
         
         },
-        update(req, res, next) {
+        edit(req, res, next) {
 
         },
         detail(req,res, next) {
 
         },
         all(req, res, next) {
-
+            const book = Book
+            .find({}, 'title author')
+            .populate('author')
+            .then((books) => {
+                res.render('./book/all.hbs', {
+                    title: 'Book List',
+                    books
+                });
+            })
+            .catch((err) => console.log(err))
         }
     },
 
@@ -29,7 +46,7 @@ module.exports = {
         post(req, res, next) {
 
         },
-        update(req, res, next) {
+        edit(req, res, next) {
 
         }
     }

@@ -4,25 +4,23 @@ module.exports = (router) => {
     /// AUTHOR ROUTES ///
 
     // GET request for creating Author. NOTE This must come before route for id (i.e. display author).
-    router.get('/author/create', authorController.get.create);
+    router.get('/create', authorController.get.create);
     // GET request to delete Author.
-    router.get('/author/all', authorController.get.all);
+    router.get('/all', authorController.get.all);
     // GET request to delete Author.
-    router.get('/author/:id/delete', authorController.get.delete);
-    // GET request to update Author.
-    router.get('/author/:id/update', authorController.get.update);
+    router.get('/delete/:authorId', authorController.get.delete);
     // GET request for one Author.
-    router.get('/author/details/:authorId', authorController.get.details);
-    router.get('/author/edit/:authorId', authorController.get.edit);
-
-    router.get('/authors', authorController.get.all);
+    router.get('/details/:authorId', authorController.get.details);
+    router.get('/edit/:authorId', authorController.get.edit);
 
     // POST request for creating Author.
-    router.post('/author/create', authorController.post.create);
+    router.post('/create', authorController.post.create);
     // POST request to delete Author.
-    router.post('/author/:id/delete', authorController.post.delete);
+    router.post('/delete/:authorId', authorController.post.delete);
     // POST request to update Author.
-    router.post('/author/:id/update', authorController.post.update);
+    router.post('/edit/:authorId', authorController.post.edit);
+    // POST request to update Author.
+
 
     return router;
 }
