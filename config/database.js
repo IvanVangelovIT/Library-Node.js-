@@ -9,4 +9,6 @@ const dbConnectionOptions = {
 
 module.exports = () => {
     return mongoose.connect(dbConnectionString, dbConnectionOptions)
+    .then(() => console.log('Successfully conected to database...'))
+    .catch((err) => console.log(err))
 };

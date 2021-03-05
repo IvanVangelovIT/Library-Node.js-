@@ -12,7 +12,6 @@ module.exports = (router) => {
     // GET request for one Author.
     router.get('/details/:authorId', authorController.get.details);
     router.get('/edit/:authorId', authorController.get.edit);
-
     // POST request for creating Author.
     router.post('/create', authorController.post.create);
     // POST request to delete Author.

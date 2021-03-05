@@ -20,7 +20,7 @@ module.exports = {
             res.render('./author/create.hbs')
         },
 
-        edit(req, res, nexr){
+        edit(req, res, next){
 
             const {authorId} = req.params;
 

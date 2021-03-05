@@ -4,7 +4,7 @@ const bookInstanceController = require('./bookInstanceController');
 const genreController = require('./genreController');
 const homeController = require('./homeController');
 const userController = require('./userController');
-
+const populateController = require('./populateController');
 
 module.exports = {
     authorController,
@@ -12,5 +12,6 @@ module.exports = {
     bookInstanceController,
     genreController,
     homeController,
-    userController
+    userController,
+    populateController,
 };

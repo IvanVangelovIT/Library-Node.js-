@@ -14,11 +14,9 @@ module.exports = (mongoose) => {
         },
         summary: {
             type: String,
-             required: true
         },
         isbn: {
             type: String,
-            required: true
         },
         genre: [
             {
@@ -26,7 +24,7 @@ module.exports = (mongoose) => {
                 ref: 'Genre'
             }
        ]
-    });
+    }, {timestamps: true});
 
    // Virtual for book's URL
     BookSchema

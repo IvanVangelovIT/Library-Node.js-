@@ -23,7 +23,7 @@ module.exports = {
             .exec(function (err, bookinstances) {
               if (err) { return next(err); }
               // Successful, so render
-              res.render('bookinstance_list', { title: 'Book Instance List', bookinstances });
+              res.render('./bookinstance/all.hbs', { title: 'Book Instance List', bookinstances });
             });
         }
     },

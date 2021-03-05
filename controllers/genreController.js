@@ -46,7 +46,7 @@ module.exports = {
             Genre
                 .delete({_id: req.params.genreId})
                 .then((result) => {
-                    res.redirect('/genre/all');
+                    res.redirect('./genre/all.hbs');
                 })
         },
         post(req, res, next) {

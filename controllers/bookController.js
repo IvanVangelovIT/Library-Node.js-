@@ -8,7 +8,7 @@ module.exports = {
             .lean()
             .populate('author', 'first_name', 'family_name')
             .then((books) => {
-                res.render('./bookTESTSTTSTS/all.hbs', {
+                res.render('./bookInstance/all.hbs', {
                     books
                 })
             })
