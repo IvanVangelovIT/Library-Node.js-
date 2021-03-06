@@ -1,0 +1,19 @@
+<h1>Edit Author</h1>
+<p class="message"></p>
+<form action="/author/edit/{{_id}}" method="POST">
+    <div>
+        <input type="text" name="first_name" placeholder="First Name..." value="{{ first_name }}">
+    </div>
+    <div>
+        <input type="text" name="family_name" placeholder="Family Name..." value="{{ family_name }}">
+    </div>
+    <div>
+        <input type="date" name="date_of_birth" placeholder="Date Of Birth..." value="{{ date_of_birth }}">
+    </div>
+    <div>
+        <input type="date" name="date_of_death" placeholder="Date of death" value="{{ date_of_death }}">
+    </div>
+    <div>
+        <button>Edit</button>
+    </div>
+</form>

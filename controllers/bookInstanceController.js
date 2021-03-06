@@ -6,10 +6,10 @@ module.exports = {
             res.render('')
         },
         delete(req, res, next) {
-        
+              //TODO
         },
         edit(req, res, next) {
-
+              //TODO
         },
         detail(req,res, next) {
 
@@ -30,16 +30,16 @@ module.exports = {
 
     post: {
         create(req, res, next) {
-
+              //TODO
         },
         delete(req, res, next) {
-
+              //TODO
         },
         post(req, res, next) {
-
+              //TODO
         },
         edit(req, res, next) {
-
+              //TODO
         }
     }
 }
